@@ -49,7 +49,27 @@ new Thread(new Runnable() {
     }
 }, "custom-thread-1").start();
 ```
-
+## Reactive programming concepts
 This will execute the Observable on a new thread and emit results through `onNext` on "custom-thread-1".
 (This example is contrived since you could as well call `observeOn(Schedulers.currentThread())` but it
 shall suffice to illustrate the idea.)
+
+Reactive programming is an extension of the Observer software design pattern, where an object has a list of Observers that are dependent on it, and these Observers are notified by the object whenever it’s state changes.
+
+There are two basic and very important items in reactive programming, Observables and Observers. Observables publish values, while Observers subscribe to Observables, watching them and reacting when an Observable publishes a value.
+
+### In simpler terms:
+- An Observable performs some action, and publishes the result.
+- An Observer waits and watches the Observable, and reacts whenever the Observable publishes results.
+
+There are three different changes that can occur on an Observable that the Observer reacts to. These are:
+- Publishing a value
+- Throwing an error
+- Completed publishing all values
+
+A class that implements the Observer interface must provide methods for each of the three changes above:
+- An `onNext()` method that the Observable calls whenever it wishes to publish a new value
+- An `onError()` method that’s called exactly once, when an error occurs on the Observable.
+- An `onCompleted()` method that’s called exactly once, when the Observable completes execution.
+
+So an Observable that has an Observer subscribed to it will call the Observer’s onNext() zero or more times, as long as it has values to publish, and terminates by either calling onError() or onCompleted().
