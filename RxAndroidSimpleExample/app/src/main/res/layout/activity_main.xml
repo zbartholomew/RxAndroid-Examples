@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.zachbartholomew.rxandroidsimpleexample.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/startActivity1Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:text="@string/startActivity1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25"/>
+
+        <Button
+            android:id="@+id/startActivity2Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:padding="16dp"
+            android:text="@string/startActivity2"
+            app:layout_constraintLeft_toLeftOf="@+id/startActivity1Button"
+            app:layout_constraintTop_toBottomOf="@+id/startActivity1Button"/>
+
+        <Button
+            android:id="@+id/startActivity3Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="-1dp"
+            android:padding="16dp"
+            android:text="@string/startActivity3"
+            app:layout_constraintLeft_toLeftOf="@+id/startActivity2Button"
+            app:layout_constraintTop_toBottomOf="@+id/startActivity2Button"/>
+
+        <Button
+            android:id="@+id/startActivity4Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/startActivity4"
+            app:layout_constraintLeft_toLeftOf="@+id/startActivity3Button"
+            app:layout_constraintTop_toBottomOf="@+id/startActivity3Button"
+            />
+    </android.support.constraint.ConstraintLayout>
+</layout>
