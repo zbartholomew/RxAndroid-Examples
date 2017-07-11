@@ -8,6 +8,13 @@ import android.view.View;
 
 import com.zachbartholomew.rxandroidsimpleexample.databinding.ActivityMainBinding;
 
+/**
+ * Observers should be what reacts to mutations.
+ * You should avoid performing any cpu and/or network intensive tasks on an Observer.
+ * In fact, you should perform as little computation as possible in your Observers.
+ * All the hard work should be done in the Observable, while the Observer receives the results.
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -34,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, SampleRxActivity3.class));
+            }
+        });
+
+        mainBinding.startActivity4Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, SampleRxActivity4.class));
             }
         });
     }
