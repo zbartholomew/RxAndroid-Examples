@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zachbartholomew.myweather.CityWeatherActivity">
+
+    <TextView
+        android:id="@+id/cityText"
+        style="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="City"
+        tools:text="City"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintVertical_bias="0.281"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"/>
+
+    <ImageView
+        android:id="@+id/condIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/ic_menu_gallery"
+        app:layout_constraintLeft_toLeftOf="@+id/cityText"
+        app:layout_constraintRight_toRightOf="@+id/cityText"
+        app:layout_constraintTop_toBottomOf="@+id/cityText"/>
+
+    <TextView
+        android:id="@+id/condDescr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Description"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/condIcon"
+        app:layout_constraintVertical_bias="0.502"/>
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/condDescr"
+        tools:text="Temp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toTopOf="@+id/condDescr"
+        app:layout_constraintBottom_toBottomOf="@+id/condDescr"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/condDescr"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/pressLab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pressure"
+        tools:text="Pressure"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/condDescr"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/condDescr"/>
+
+    <TextView
+        android:id="@+id/press"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/pressLab"
+        tools:text="Press"
+        app:layout_constraintLeft_toLeftOf="@+id/temp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@+id/temp"/>
+
+    <TextView
+        android:id="@+id/humLab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pressLab"
+        tools:text="humitity"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/windLab"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/windLab"/>
+
+    <TextView
+        android:id="@+id/hum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/humLab"
+        tools:text="hum"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/windSpeed"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/windSpeed"/>
+
+    <TextView
+        android:id="@+id/windLab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/humLab"
+        android:text="Wind"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/pressLab"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/pressLab"/>
+
+    <TextView
+        android:id="@+id/windSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/windLab"
+        tools:text="wind speed"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/press"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/press"/>
+
+    <TextView
+        android:id="@+id/windDeg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/windLab"
+        tools:text="wind deg"
+        app:layout_constraintTop_toTopOf="@+id/windSpeed"
+        app:layout_constraintBottom_toBottomOf="@+id/windSpeed"
+        app:layout_constraintLeft_toRightOf="@+id/windSpeed"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"/>
+
+</android.support.constraint.ConstraintLayout>
